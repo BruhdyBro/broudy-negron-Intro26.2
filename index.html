@@ -6,13 +6,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Broudy Negron">
-    
 
-        <!-- Extra Style Points -->
-        <!-- Set h1 as blue -->
-        <style>
-            h1{color: rgb(41, 138, 228);}
-        </style>
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
+
+        <nav class="nav-bar">
+            <ul>
+                <a href="index.html"><li>Back to Top</li></a>
+                <a href="#About"><li>About</li></a>
+                <a href="#Experience"><li>Experience</li></a>
+                <a href="#Skills"><li>Skills</li></a>
+                <a href="#Projects"><li>Projects</li></a>
+                <a href="#Connect"><li>Connect</li></a>
+            </ul>
+        </nav> 
 
     </head>
 
@@ -20,7 +29,13 @@
     <body>
 
         <!-- Header with my name -->
+        <section id="Top">
         <h1>Broudy Negron</h1>
+        </section>
+
+        <div class="headshot">
+            <img src="images/headshot.jpg" alt="Image of Broudy Negron">
+        </div>
 
         <!-- This is the About Section -->
         <section id="About">
@@ -35,30 +50,86 @@
 
             </section>
        
-    
-
         <!-- This is the Experience Section -->
         <section id="Experience">
-        <h2>Experience</h2>
-            <ul>
-                <li>Code the Dream - Intro to Programming</li>
-                <li>BS in Computer Science (graduate this semester)</li>
-                <li>C</li>
-                <li>Java</li>
-                <li>JavaScript</li>
-                <li>HTML</li>
-                <li>A lil' bit of GDScript</li>
-            </ul>
+            <h2>Experience</h2>
+            <div class="experience-list">
+                <ul>
+                    <div class="experience-main">
+                        <li>C & S Pools</li>
+                        <li>2022</li>
+                    </div>
+                    <div class="experience-desc">
+                        <li>Office Clerk</li>
+                    </div>
+
+                    <div class="experience-main">
+                        <li>Miami Dade College</li>
+                        <li>July 2024</li>
+                    </div>
+                    <div class="experience-desc">
+                        <li>Majored in Computer Science, GPA: 4.0</li>
+                    </div>
+
+                    <div class="experience-main">
+                        <li>Florida International University</li>
+                        <li>August 2026</li>
+                    </div>
+                    <div class="experience-desc">
+                        <li>Majored in Computer Science, GPA: 3.90</li>
+                    </div>
+                </ul>
+            </div>
+        </section>
+
+        <section id="Skills">
+            <div class="skills-list">
+            <h2>Skills</h2>
+                <ul>
+                    <!--
+                    <li>Code the Dream - Intro to Programming</li>
+                    <li>BS in Computer Science (graduate this semester)</li>
+                    <li>C</li>
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>A lil' bit of GDScript</li>
+                    
+                    for future possibilties.
+
+                    -->
+                </ul>
+            </div>
+        </section>
+
+        <section id="Projects">
+            <h2>Projects</h2>
+            <div class="projects-list">
+                
+            </div>
         </section>
 
         <section id="Connect">
             <h2>Connect</h2>
 
             <ul>
-                <li><a href="https://github.com/BruhdyBro">My GitHub Page</a></li>
-                <li><a href="https://www.linkedin.com/in/broudy-negron-0b813132a/">My LinkedIn Page</a></li>
-            </ul>
-        </section>
+                <div class="connect-list">
+                <li><a href="https://github.com/BruhdyBro">
+                    <!-- My GitHub Page</a></li> -->
+                     <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1648097414805/0jyz1JneA.jpg"
+                        alt="Link to Broudy's GitHub page">
+                     </a></li>
+                
 
+                
+                <li><a href="https://www.linkedin.com/in/broudy-negron-0b813132a/">
+                    <!-- My LinkedIn Page -->
+                     <img src="https://yt3.googleusercontent.com/i6KNxiy3gME-BulL4WnuGkTGqHuSYF8jl1WRn0rXftcJdSYK7dHKcJ3gLAaPc-KfhmLSYPwf824=s900-c-k-c0x00ffffff-no-rj"
+                        alt="Link to Broudy's LinkedIn page">
+                </a></li>
+                </div>
+            </ul>
+
+        </section>
     </body>
 </html>

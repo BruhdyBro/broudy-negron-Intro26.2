@@ -91,21 +91,21 @@ h2 {
     align-items: center;
     width: 100%;
     list-style-type: none;
+    
 }
 
-.experience-main li{
+.experience-main p{
     
     width: 450px;
+    margin-bottom: -5px;
 }
 
 .experience-desc {
     width: 100%;
-    margin-bottom: 30px;
 }
 
-.experience-desc li{
-    margin: 5px 0 0 0;
-    
+.experience-desc p{
+    margin-left: 40px;
 }
 
 

@@ -1,0 +1,135 @@
+
+body {
+    background-color:darkslategrey;
+    color: rgb(180, 180, 180);
+}
+
+h1 { 
+    background-color: rgb(80, 0, 80);
+    color: rgb(41, 138, 228);
+    text-align:center;
+    justify-content: center;
+    margin-left:25%;
+    margin-right:25%;
+    padding: 10px;
+    font-family: "Mansalva";
+    font-size: 50px;
+    border-radius: 25px;
+    
+}
+
+.nav-bar {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -50px;
+}
+
+.nav-bar ul{
+    list-style-type: none;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-bar li {
+
+    background-color: #e3e7a1;
+    padding: 20px;
+    border: 1px solid;
+    border-color: aliceblue;
+}
+
+.nav-bar li:hover {
+
+    background-color: #76ac92;
+    
+}
+
+p {
+
+    margin-left: 20px;
+}
+
+
+
+h2 {
+    background-color: rgb(110, 14, 14);
+    color: rgb(180, 180, 180);
+    width: 150px;
+    text-align:center;
+    font-family: "Mansalva";
+    margin: 30px 10px 10px 10px;
+    padding: 5px;
+}
+
+.headshot {
+    text-align:center;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+.headshot img {
+
+    border-radius: 25px;
+    width: 500px;
+}
+
+.experience-list ul{
+    padding: 0;
+    margin: 0;
+}
+
+.experience-main {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+    list-style-type: none;
+    
+}
+
+.experience-main p{
+    
+    width: 450px;
+    margin-bottom: -5px;
+}
+
+.experience-desc {
+    width: 100%;
+}
+
+.experience-desc p{
+    margin-left: 40px;
+}
+
+
+.skills-list li {
+
+    display: block;
+    padding: 5px;
+    border: 5px solid #000000;
+    margin-right: 75%;
+    margin-left: -20px;
+    border-radius: 5px;
+}
+
+.connect-list {
+
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.connect-list img {
+
+    border-radius: 25px;
+    width: 100px;
+}

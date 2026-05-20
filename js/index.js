@@ -7,24 +7,23 @@ document.body.appendChild(aFooter);
 var today = new Date();
 var thisYear = today.getFullYear();
 
-var newFooter = document.querySelector("footer");
-console.log(newFooter);
+var footer = document.querySelector("footer");
+console.log(footer);
 
-var aCopyright = document.createElement("p");
+var copyright = document.createElement("p");
 const copyrightSymbol = "\u00A9";
-var copyrightText = copyrightSymbol + "Broudy Negron " + thisYear;
-aCopyright.innerHTML = copyrightText;
+copyright.innerHTML = copyrightSymbol + "Broudy Negron " + thisYear;
 
-newFooter.appendChild(aCopyright);
+footer.appendChild(copyright);
 
 //skills
 const skills = ["JavaScript", "HTML", "CSS", "C", "Java", "GDScript", "VSCode", "GitHub", "DaVinci Resolve"];
-const skillSection = document.getElementById("skills");
-var skillsList = skillSection.querySelector("ul");
+const skillsSection = document.getElementById("skills");
+var skillsList = skillsSection.querySelector("ul");
 
-for (i = 0; i < skills.length; i++) {
+for (let mySkill in skills) {
 
     var skill = document.createElement("li");
-    skill.innerHTML = (skills[i]);
+    skill.innerHTML = (skills[mySkill]);
     skillsList.appendChild(skill);
 }

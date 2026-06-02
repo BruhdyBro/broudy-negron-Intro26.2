@@ -55,8 +55,6 @@ p {
     margin-left: 20px;
 }
 
-
-
 h2 {
     background-color: rgb(110, 14, 14);
     color: rgb(180, 180, 180);
@@ -108,22 +106,6 @@ h2 {
     margin-left: 40px;
 }
 
-.connect-list {
-
-    display: flex;
-    list-style-type: none;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 20px;
-}
-
-.connect-list img {
-
-    border-radius: 25px;
-    width: 100px;
-}
-
-
 .skills-list {
 
     display: flex;
@@ -141,4 +123,91 @@ h2 {
    padding-top: 15px;
    text-align: center;
    
+}
+
+.connect-list {
+
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.connect-list img {
+
+    border-radius: 25px;
+    width: 100px;
+}
+
+.message-me {
+
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    width: 400px;
+}
+
+.message-me textarea {
+
+    width: 100%;
+    resize: none;
+    padding: 5px;
+    field-sizing: content;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.email-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.span-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.edit-textarea {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.remove-button {
+
+    color: white;
+    background-color: red;
+}
+
+.edit-button {
+
+    background-color: yellow;
+}
+
+.cancel-button {
+
+    color: white;
+    background-color: red;
+}
+
+.confirm-button {
+
+    color: white;
+    background-color: green;
+}
+
+.edit-textarea {
+    width: 50%;
+    resize: none;
+    padding: 5px;
+    field-sizing: content;
+    overflow-y: auto;
+    box-sizing: border-box;
 }

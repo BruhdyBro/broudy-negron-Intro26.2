@@ -24,9 +24,10 @@
                     <li> <a href="#top">Back to Top</a>         </li>
                     <li> <a href="#about">About</a>             </li>
                     <li> <a href="#experience">Experience</a>   </li>
-                    <li> <a href="#skills">Skills</a>           </li>
                     <li> <a href="#projects">Projects</a>       </li>
+                    <li> <a href="#skills">Skills</a>           </li>
                     <li> <a href="#connect">Connect</a>         </li>
+                    <li> <a href="#message-me">Contact Me</a>    </li>
                 </ul>
             </nav> 
 
@@ -142,10 +143,36 @@
             </ul>
         </section>
 
-        <script src="js/index.js">
+        <section id="message-me">
 
+            <h2>Leave a Message!</h2>
+            <div class="message-me">
+                <form name="leave_message">
 
-        </script>
+                    <label for="usersName">Your Name:</label>
+                    <input id="usersName" type="text" name="usersName" required><br>
+
+                    <label for="usersEmail">Your Email:</label>
+                    <input id="usersEmail" type="email" name="usersEmail" required><br>
+
+                    <label for="usersMessage">Your message:</label>
+                    <textarea id="usersMessage" name="usersMessage" required></textarea><br>
+
+                    <button type="submit">Submit</button>
+
+                </form>
+            </div>
+        </section>
+
+        <section id="messages">
+
+            <h2>Messages</h2>
+            <div class="messages">
+                <ul></ul>
+            </div>
+        </section>
+
+        <script src="js\index.js"></script>
 
     </body>
 </html>

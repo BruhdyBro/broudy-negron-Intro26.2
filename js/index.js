@@ -14,6 +14,9 @@ var copyright = document.createElement("p");
 const copyrightSymbol = "\u00A9";
 copyright.innerHTML = copyrightSymbol + "Broudy Negron " + thisYear;
 
+// A secret tool used for later
+const linkSymbol = "🔗";
+
 footer.appendChild(copyright);
 
 //skills
@@ -147,3 +150,36 @@ messageForm.addEventListener("submit", function(event) {
     // Empties the form 
     messageForm.reset();
 });
+
+// Calls GitHub API for my Repositories
+const myGitHubRepos = "https://api.github.com/users/BruhdyBro/repos";
+fetch(myGitHubRepos)
+.then((response) => response.json()) // Parse Response into JSON
+
+.then((data) => { // Create list with data
+    repositories = data;
+    console.log(repositories);
+    projectSection = document.getElementById("projects");
+    projectList = projectSection.querySelector("ul");
+
+    // For each Project in the Repositories
+    for (let project of repositories) {
+
+        // Create a list element with project name
+        const repo = document.createElement("li");
+        repo.innerHTML = (project.name);
+
+        // Create link to the the Repo
+        const repoLink = document.createElement("a");
+        repoLink.href = (`https://github.com/${project.full_name}`)
+        repoLink.innerHTML = linkSymbol; // Using that secret tool :D
+        
+        // Append both list element and link 
+        repo.appendChild(repoLink);
+        projectList.appendChild(repo);
+    }
+})
+//Catch Error
+.catch((error) => console.log("Could not fetch Repositories through GitHub API", error));
+
+

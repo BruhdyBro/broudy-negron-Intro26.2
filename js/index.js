@@ -157,10 +157,10 @@ fetch(myGitHubRepos)
 .then((response) => response.json()) // Parse Response into JSON
 
 .then((data) => { // Create list with data
-    repositories = data;
+    const repositories = data;
     console.log(repositories);
-    projectSection = document.getElementById("projects");
-    projectList = projectSection.querySelector("ul");
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
 
     // For each Project in the Repositories
     for (let project of repositories) {

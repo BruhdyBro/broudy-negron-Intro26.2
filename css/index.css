@@ -23,6 +23,8 @@ h1 {
 .nav-bar {
     display: flex;
     position: fixed;
+    padding-left: 0px;
+    margin-left: 0px;
     justify-content: center;
     align-items: center;
     width: 100%;

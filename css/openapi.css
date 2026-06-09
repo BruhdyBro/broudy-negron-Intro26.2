@@ -1,0 +1,167 @@
+
+/*
+    GLOBAL SETTINGS
+*/
+
+body {
+    background-color:darkslategrey;
+    color: rgb(180, 180, 180);
+}
+
+h1 { 
+    background-color: rgb(80, 0, 80);
+    color: rgb(41, 138, 228);
+    text-align:center;
+    justify-content: center;
+    margin-left:25%;
+    margin-right:25%;
+    padding: 10px;
+    font-family: "Mansalva";
+    font-size: 50px;
+    border-radius: 25px;
+    
+}
+
+h2 {
+    background-color: rgb(110, 14, 14);
+    color: rgb(180, 180, 180);
+    width: 150px;
+    text-align:center;
+    font-family: "Mansalva";
+    margin:30px auto 10px auto;
+    padding: 5px;
+}
+
+img {
+
+    width: 300px;
+    background-color: white;
+}
+
+
+
+/*
+    NAVIGATION BAR
+*/
+.nav-bar {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -50px;
+}
+
+.nav-bar ul{
+    list-style-type: none;
+    padding-left: 0px;
+    margin-left: 0px;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-bar li {
+
+    background-color: #e3e7a1;
+    padding: 20px;
+    border: 1px solid;
+    border-color: aliceblue;
+}
+
+.nav-bar li:hover {
+
+    background-color: #76ac92;
+    
+}
+
+
+
+/*
+    ABOUT SECTION
+*/
+.about {
+
+    text-align: center;
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+
+
+/*
+    Each Pokemon is kept separate just in case for future
+*/
+
+/*
+    1ST POKEMON
+*/
+.poke1 {
+
+    text-align: center;
+}
+
+.poke1info {
+
+    text-align: center;
+}
+
+.poke1info ul{
+    list-style: none;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+
+
+/*
+    2nd POKEMON
+*/
+.poke2 {
+
+    text-align: center;
+}
+
+.poke2info {
+
+    text-align: center;
+}
+
+.poke2info ul{
+    list-style: none;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+
+
+/*
+    3rd POKEMON
+*/
+.poke3 {
+
+    text-align: center;
+}
+
+.poke3info {
+
+    text-align: center;
+}
+
+.poke3info ul{
+    list-style: none;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+.end p {
+
+    text-align: center;
+}
+
+.end a {
+    color: white;
+}

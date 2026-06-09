@@ -181,5 +181,3 @@ fetch(myGitHubRepos)
 })
 //Catch Error
 .catch((error) => console.log("Could not fetch Repositories through GitHub API", error));
-
-

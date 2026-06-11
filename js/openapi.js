@@ -20,36 +20,40 @@ async function getPokeInfo (pokemonName, appendLocation) {
         let pokemonData = data;  
 
         const infoPiece = document.createElement("li");
-        infoPiece.innerHTML = `Name: ${pokemonData.name}`;
+        infoPiece.textContent = `Name: ${pokemonData.name}`;
         infoList.appendChild(infoPiece);
 
         if (data.types.length == 1) {
 
             const pokeType = document.createElement("li");
-            pokeType.innerHTML = ("Type: " + pokemonData.types[0].type.name);
+            pokeType.textContent = ("Type: " + pokemonData.types[0].type.name);
             infoList.appendChild(pokeType);
         }
 
         else if (pokemonData.types.length == 2) {
-            
-            for (types in pokemonData.types) {
-            const pokeType = document.createElement("li");
 
-            pokeType.innerHTML = (`Type ${Number(types) + 1}: ${pokemonData.types[types].type.name}`);
+            let i = 0;
+
+            for (let types of pokemonData.types) {
+
+            const pokeType = document.createElement("li");
+            pokeType.textContent = (`Type ${i+1}: ${types.type.name}`);
             infoList.appendChild(pokeType);
+            i++;
             }
         }
 
         const pokeHeight = document.createElement("li");
-        pokeHeight.innerHTML = `Height: ${Number(pokemonData.height) / 10} meters`;
+        pokeHeight.textContent = `Height: ${Number(pokemonData.height) / 10} meters`;
         infoList.appendChild(pokeHeight);
 
         const pokeWeight = document.createElement("li");
-        pokeWeight.innerHTML = `Weight: ${Number(pokemonData.weight) / 10} kg`;
+        pokeWeight.textContent = `Weight: ${Number(pokemonData.weight) / 10} kg`;
         infoList.appendChild(pokeWeight);
             
         
     })
+    .catch((error) => console.log("Could not fetch Pokemon info through PokeAPI: ", error));
 
     fetch(pokeAPI + speciesURL + pokemonName)
     .then((response => response.json()))
@@ -57,7 +61,7 @@ async function getPokeInfo (pokemonName, appendLocation) {
         let speciesData = data; 
 
         const pokeGen = document.createElement("li");
-        pokeGen.innerHTML = ("Generation: " + speciesData.generation.name);
+        pokeGen.textContent = ("Generation: " + speciesData.generation.name);
         infoList.appendChild(pokeGen);
 
 
@@ -67,12 +71,14 @@ async function getPokeInfo (pokemonName, appendLocation) {
         .then((data)=> { 
 
             const pokeRegion = document.createElement("li");
-            pokeRegion.innerHTML = ("Main Region: " + data.main_region.name);
+            pokeRegion.textContent = ("Main Region: " + data.main_region.name);
             infoList.appendChild(pokeRegion);
         })
+        .catch((error) => console.log("Could not fetch Pokemon info through PokeAPI: ", error));
 
 
     })
+    .catch((error) => console.log("Could not fetch Pokemon info through PokeAPI: ", error));
 
     appendLocation.appendChild(infoList);
 }

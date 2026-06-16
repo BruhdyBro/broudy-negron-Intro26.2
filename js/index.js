@@ -1,37 +1,46 @@
-const aFooter = document.createElement("FOOTER");
-aFooter.className = "footer";
-aFooter.setAttribute("id", "myfooter");
-document.body.appendChild(aFooter);
+/*
+    Document Footer
+*/
 
+// Creating Document Footer
+const bruhdyFooter = document.createElement("footer");
+bruhdyFooter.className = "footer";
+bruhdyFooter.setAttribute("id", "myfooter");
+document.body.appendChild(bruhdyFooter);
 
 var today = new Date();
 var thisYear = today.getFullYear();
-
-var footer = document.querySelector("footer");
-console.log(footer);
-
 var copyright = document.createElement("p");
-const copyrightSymbol = "\u00A9";
-copyright.innerHTML = copyrightSymbol + "Broudy Negron " + thisYear;
+copyright.innerHTML = "\u00A9" + "BroudyNegron" + thisYear;
 
-// A secret tool used for later
-const linkSymbol = "🔗";
+bruhdyFooter.appendChild(copyright);
 
-footer.appendChild(copyright);
 
-//skills
+
+/*
+    Skills
+*/
+
+// Create Skill List
 const skills = ["JavaScript", "HTML", "CSS", "C", "Java", "GDScript", "VSCode", "GitHub", "DaVinci Resolve"];
 const skillsSection = document.getElementById("skills");
 var skillsList = skillsSection.querySelector("ul");
 
+// For each skill in Skill list
 for (let mySkill of skills) {
 
+    // Add that skill to the page
     var skill = document.createElement("li");
     skill.innerHTML = (mySkill);
     skillsList.appendChild(skill);
 }
 
-//Messaging Form System
+
+
+/*
+    Messaging Form System
+*/
+
 const messageForm = document.getElementsByName("leave_message")[0];
 messageForm.addEventListener("submit", function(event) {
 
@@ -42,11 +51,6 @@ messageForm.addEventListener("submit", function(event) {
     const usersName = event.target.usersName.value;
     const usersEmail = event.target.usersEmail.value;
     const usersMessage = event.target.usersMessage.value;
-
-    // Log to console for testing purposes
-    console.log(usersName);
-    console.log(usersEmail);
-    console.log(usersMessage);
     
     // Adding User's message to Message Board
     const messageSection = document.getElementById("messages");
@@ -151,14 +155,21 @@ messageForm.addEventListener("submit", function(event) {
     messageForm.reset();
 });
 
-// Calls GitHub API for my Repositories
+
+
+/*
+    Call GitHub API
+*/
+
+// A secret tool used for later
+const linkSymbol = "🔗";
+
 const myGitHubRepos = "https://api.github.com/users/BruhdyBro/repos";
 fetch(myGitHubRepos)
 .then((response) => response.json()) // Parse Response into JSON
 
 .then((data) => { // Create list with data
     const repositories = data;
-    console.log(repositories);
     const projectSection = document.getElementById("projects");
     const projectList = projectSection.querySelector("ul");
 
@@ -167,7 +178,7 @@ fetch(myGitHubRepos)
 
         // Create a list element with project name
         const repo = document.createElement("li");
-        repo.innerHTML = (project.name);
+        repo.innerHTML = (`${project.name} `);
 
         // Create link to the the Repo
         const repoLink = document.createElement("a");
@@ -180,4 +191,4 @@ fetch(myGitHubRepos)
     }
 })
 //Catch Error
-.catch((error) => console.log("Could not fetch Repositories through GitHub API", error));
+.catch((error) => console.error("Could not fetch Repositories through GitHub API", error));

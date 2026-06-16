@@ -35,7 +35,20 @@ h2 {
 img {
 
     width: 300px;
+    padding: 0px;
     background-color: white;
+}
+
+button {
+    border: 0px;
+    line-height: 0px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+p {
+
+    text-align: center;
 }
 
 

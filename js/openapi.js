@@ -1,3 +1,24 @@
+/*
+    Document Footer
+*/
+
+// Creating Document Footer
+const bruhdyFooter = document.createElement("footer");
+bruhdyFooter.className = "footer";
+bruhdyFooter.setAttribute("id", "myfooter");
+document.body.appendChild(bruhdyFooter);
+
+var today = new Date();
+var thisYear = today.getFullYear();
+var copyright = document.createElement("p");
+copyright.innerHTML = "\u00A9" + "BroudyNegron" + thisYear;
+
+bruhdyFooter.appendChild(copyright);
+
+/*
+    API Stuff
+*/
+
 // Selecting Page Elements and Creating API Endpoint Locations
 const pokeAPI = "https://pokeapi.co/api/v2/";
 const pokemonURL = "pokemon/";
@@ -95,12 +116,12 @@ async function getPokeInfo (pokemonName, appendLocation) {
                 pokeRegion.textContent = ("Main Region: " + data.main_region.name);
                 infoList.appendChild(pokeRegion);
             })
-            .catch((error) => console.log("Could not fetch Pokemon info through PokeAPI: ", error));
+            .catch((error) => console.error("Could not fetch Pokemon info through PokeAPI: ", error));
 
         })
-        .catch((error) => console.log("Could not fetch Pokemon info through PokeAPI: ", error));
+        .catch((error) => console.error("Could not fetch Pokemon info through PokeAPI: ", error));
     })
-    .catch((error) => console.log("Could not fetch Pokemon info through PokeAPI: ", error));
+    .catch((error) => console.error("Could not fetch Pokemon info through PokeAPI: ", error));
 
 
     // Append information to Append Location specified
